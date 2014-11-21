@@ -5,7 +5,7 @@ node_js:
 
 
 addons:
-   firefox: "28.0"
+   firefox: "21.0"
    
 before_install:
   - "export DISPLAY=:99.0"
@@ -16,4 +16,3 @@ script:
   - 'if [[ $TRAVIS_PULL_REQUEST == ''false'' ]]; then { npm run test-remote; }; else { npm run test-local; }; fi'
   - firefox --version
 
-build_image: shippable/minv2
